@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMF: Covert Intelligence Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-green-400 flex flex-col items-center justify-center min-h-screen p-4 relative">
+
+  <div class="w-full max-w-4xl rounded-2xl mb-6 overflow-hidden">
+        <div class="font-mono p-6 ">
+            <p class="text-sm text-green-300">
+                Enter your questions about the Mission Impossible film franchise in the input box below to receive classified mission responses.
+                From Ethan Hunt's daring stunts to the most iconic spy moments, your inquiries will be addressed.(Try questions like "who is ethan hunt?")
+            </p>
+            <p class="text-sm mt-2 text-red-400">
+                Note ⚠️: I have only used Mission Impossible film data for vector embeddings and retrieving content,
+                so this terminal only contains data specifically from Mission Impossible films.
+                Inquiries outside this scope cannot be answered.
+            </p>
+        </div>
+  </div>
+
+    <div class="w-full max-w-4xl rounded-2xl overflow-hidden">
+        <div class="font-mono p-3">
+            <div class="text-center mb-2">
+                <h1 class="text-xl font-semibold text-green-400">IMF Secure Interface</h1>
+            </div>
+
+            <form id="query-form" class="mb-2 space-y-4">
+                <input
+                    type="text"
+                    id="query"
+                    required
+                    placeholder="Enter classified mission parameters"
+                    class="w-full px-4 py-3 bg-gray-700 border border-green-500 rounded-lg text-green-300 focus:outline-none focus:ring focus:ring-green-500"
+                />
+                <button
+                    type="submit"
+                    class="w-full py-3 bg-green-600 hover:bg-red-500 transition duration-300 rounded-lg text-white flex items-center justify-center space-x-2"
+                >
+                    <span>Execute Mission Protocol</span>
+                </button>
+            </form>
+
+            <div class="bg-gray-800 border border-green-500 rounded-lg p-4 mt-4 min-h-[150px] relative">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs text-green-500 uppercase tracking-wider flex items-center">
+                        <i class="fas fa-terminal mr-2"></i>
+                        Mission Details
+                    </span>
+                    <div id="timer" class="text-xs text-red-500"></div>
+                </div>
+                <p id="result-text" class="text-green-300 text-xs">Agent, Awaiting mission parameters... Secure channel ready.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            let countdownInterval;
+
+            function startCountdown(duration) {
+                let timer = duration, minutes, seconds;
+                countdownInterval = setInterval(function() {
+                    minutes = Math.floor(timer / 60);
+                    seconds = timer % 60;
+
+                    $('#timer').text(`Message Self-destructs in: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`);
+                    if (--timer < 0) {
+                        clearInterval(countdownInterval);
+                        $('#result-text').html('<span class="text-red-500"><i class="fas fa-explosion mr-2"></i>Mission Response: Classified Files Deleted.</span>');
+                    }
+                }, 1000);
+            }
+
+            $('#query-form').on('submit', function(event) {
+                event.preventDefault();
+                clearInterval(countdownInterval);
+
+                var query = $('#query').val();
+                if (!query.trim()) {
+                    $('#result-text').html('<span class="text-red-500"><i class="fas fa-exclamation-triangle mr-2"></i>Error: Query cannot be empty.</span>');
+                    return;
+                }
+
+                $('#result-text').html('<span class="text-green-500"><i class="fas fa-cogs mr-2"></i>Decrypting mission directive...</span>');
+                $('#timer').text('Initializing secure network...');
+
+                $.ajax({
+                    url: '/query',
+                    type: 'POST',
+                    data: { query: query },
+                    success: function(response) {
+                        if (response.error) {
+                            $('#result-text').html('<span class="text-red-500"><i class="fas fa-exclamation-triangle mr-2"></i>Error: ' + response.error + '</span>');
+                        } else {
+                            $('#result-text').html('<span class="text-green-400">' + response.answer + '</span>');
+                            startCountdown(45);
+                        }
+                    },
+                    error: function() {
+                        $('#result-text').html('<span class="text-red-500"><i class="fas fa-exclamation-triangle mr-2"></i>Mission Transmission Error: Secure Channel Compromised</span>');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
