@@ -73,27 +73,14 @@ I have only used Mission: Impossible film data for embedding and retrieving cont
 
 ### Screenshots
 
-
-
+#### 1. Try asking about the character - who is Benji?
 <img src="screenshots/screenshot%20-%201.jpeg" alt="Screenshot 1" style="display: block; margin: 0 auto;">
-<div style="text-align: center; padding-bottom: 15px;">
-    Try asking about the character - who is Benji?
-</div>
 
-
-
+#### 2. If you want to know more about specific film in the franchise - like fallout here.
 <img src="screenshots/screenshot%20-%202.jpeg" alt="Screenshot 2" style="display: block; margin: 0 auto;">
-<div style="text-align: center; padding-bottom: 15px; padding-top: 15px;">
-    If you want to know more about specific film in the franchise - like fallout here.
-</div>
 
-
-
+#### 3. Asking a fact related to Tom Cruise
 <img src="screenshots/screenshot%20-%203.jpeg" alt="Screenshot 3" style="display: block; margin: 0 auto;">
-<div style="text-align: center; padding-bottom: 15px; padding-top: 15px;">
-    Asking a fact related to Tom Cruise
-</div>
-
 
 ### Contributing
 
