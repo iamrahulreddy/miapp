@@ -1,6 +1,6 @@
 ## Mission: Impossible RAG Application
 
-Welcome to the Mission: Impossible RAG (Retrieval-Augmented Generation) Application! This project is a labor of love, inspired by my deep admiration for the *Mission: Impossible* film franchise. Whether you're a die-hard fan or just curious about the intricate world of espionage, this application is designed to provide you with insightful and engaging information about the characters and plots from the *Mission: Impossible* universe.
+Welcome to the miapp! This project is a labor of love, inspired by my deep admiration for the *Mission: Impossible* film franchise. Whether you're a die-hard fan or just curious about the intricate world of espionage, this application is designed to provide you with insightful and engaging information about the characters and plots from the *Mission: Impossible* universe.
 
 ### **Live Demo**
 Check out the live demo of the Mission: Impossible RAG application at [miapp.neuralnets.dev](https://miapp.neuralnets.dev) to experience it in action!
@@ -27,12 +27,11 @@ The Mission: Impossible RAG Application is a web-based tool that allows users to
 - **Semantic Embedding**: Utilizes advanced embedding techniques to understand the semantic meaning of both the documents and user queries.
 - **Generative Responses**: Generates comprehensive and user-friendly responses based on the retrieved information, ensuring a conversational tone.
 - **User-Friendly Interface**: A sleek and intuitive interface that makes it easy for users to input their queries and receive answers.
-- **Self-Destructing Messages**: A fun countdown timer that adds a touch of espionage flair, simulating the self-destructing messages from the films.
 
 ### Technology Stack
 
 - **Backend**: Flask
-- **Frontend**: HTML, CSS (Tailwind CSS), JavaScript (jQuery)
+- **Frontend**: React, Tailwind CSS (We are using React to generate static files for frontend UI)
 - **Embedding and Generation**: Google Generative AI
 - **Data Handling**: Pandas, NumPy
 - **Similarity Measurement**: Scikit-learn (Cosine Similarity)
@@ -43,7 +42,7 @@ To set up the Mission: Impossible RAG Application on your local machine, follow 
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/iamrahulreddy/mission-impossible-rag.git
+   git clone https://github.com/iamrahulreddy/miapp.git
    ```
 
 2. **Install Dependencies**:
@@ -58,12 +57,15 @@ To set up the Mission: Impossible RAG Application on your local machine, follow 
    ```
    You can get your Gemini API key [here](https://ai.google.dev/gemini-api/docs/api-key).
 
-4. **Run the Application**:
+4. **Generate static files and place them in templates/ directory**:
+   (Run the App.js in templates/ in a node environment and move them files here - See templates/ directory for more info.)
+
+5. **Run the Application**:
    ```bash
    python app.py
    ```
 
-5. **Access the Application**:
+6. **Access the Application**:
    Open your browser and navigate to `http://127.0.0.1:5000/`.
 
 ### Note 📝
@@ -74,7 +76,7 @@ I have only used *Mission: Impossible* film data for embedding and retrieving co
 
 1. **Enter Your Query**: Type your question about the *Mission: Impossible* franchise in the input box.
 2. **Submit**: Click the "Execute Mission Protocol" button to submit your query.
-3. **Receive Response**: Wait for the application to process your query and display the response. You can adjust the self-destruct timer (in seconds) for the response in `template/index.html`. Once the countdown finishes, the message will be destroyed. If you want to see the message again, you will need to submit a new query. Since LLMs (Large Language Models) are probabilistic, you may receive a slightly different but still relevant response.
+3. **Receive Response**: Wait for the application to process your query and display the response. Since LLMs (Large Language Models) are probabilistic, you may receive a slightly different but still relevant response.
 
 ### Screenshots
 
@@ -99,8 +101,9 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 To deploy **miapp** to a production server, follow these general steps:  
 
 1. **Set up a virtual environment** – Install and configure a virtual environment to manage dependencies efficiently.  
-2. **Generate static files** – Collect static files for the `templates/` directory to ensure they are properly served.  
-3. **Configure Nginx** – Reference the generated static files in the Nginx configuration to serve them correctly.  
+2. **Generate static files** – Collect static files for the `templates/` directory to ensure they are properly served.
+3. **Use gunicorn** for production  
+4. **Configure Nginx** – Use Nginx as reverse proxy and Reference the generated static files in the Nginx configuration to serve them correctly.  
 
 These are high-level steps (Additional Configurations are required.)
 
