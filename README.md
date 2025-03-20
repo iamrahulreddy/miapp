@@ -84,13 +84,13 @@ I have only used *Mission: Impossible* film data for embedding and retrieving co
 <img src="screenshots/Screenshot - 1.jpeg" alt="Screenshot 1" style="display: block; margin: 0 auto;">
 
 #### 2. Asking a fact related to Tom Cruise
-<img src="screenshots/Screenshot - 2.png.jpeg" alt="Screenshot 3" style="display: block; margin: 0 auto;">
+<img src="screenshots/Screenshot - 2.png" alt="Screenshot 2" style="display: block; margin: 0 auto;">
 
 #### 3. A question - Who is Benji?
-<img src="screenshots/Screenshot - 3.jpeg" alt="Screenshot 2" style="display: block; margin: 0 auto;">
+<img src="screenshots/Screenshot - 3.jpeg" alt="Screenshot 3" style="display: block; margin: 0 auto;">
 
 #### 4. If you want to know more about a specific film in the franchise - like Fallout here.
-<img src="screenshots/Screenshot - 3.jpeg" alt="Screenshot 2" style="display: block; margin: 0 auto;">
+<img src="screenshots/Screenshot - 3.jpeg" alt="Screenshot 3" style="display: block; margin: 0 auto;">
 
 ### Contributing
 
