@@ -78,14 +78,17 @@ I have only used *Mission: Impossible* film data for embedding and retrieving co
 
 ### Screenshots
 
-#### 1. Try asking about the character - who is Benji?
-<img src="screenshots/screenshot%20-%201.jpeg" alt="Screenshot 1" style="display: block; margin: 0 auto;">
+#### 1. A login screen (Very Basic One - Just For Fun :) for an IMF Intelligence Division
+<img src="screenshots/Screenshot - 1.jpeg" alt="Screenshot 1" style="display: block; margin: 0 auto;">
 
-#### 2. If you want to know more about a specific film in the franchise - like Fallout here.
-<img src="screenshots/screenshot%20-%202.jpeg" alt="Screenshot 2" style="display: block; margin: 0 auto;">
+#### 2. Asking a fact related to Tom Cruise
+<img src="screenshots/Screenshot - 2.png.jpeg" alt="Screenshot 3" style="display: block; margin: 0 auto;">
 
-#### 3. Asking a fact related to Tom Cruise
-<img src="screenshots/screenshot%20-%203.jpeg" alt="Screenshot 3" style="display: block; margin: 0 auto;">
+#### 3. A question - Who is Benji?
+<img src="screenshots/Screenshot - 3.jpeg" alt="Screenshot 2" style="display: block; margin: 0 auto;">
+
+#### 4. If you want to know more about a specific film in the franchise - like Fallout here.
+<img src="screenshots/Screenshot - 3.jpeg" alt="Screenshot 2" style="display: block; margin: 0 auto;">
 
 ### Contributing
 
@@ -93,11 +96,17 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 
 ### Deployment
 
-To deploy the Mission: Impossible RAG application to a production server, follow these general steps:
+To deploy **miapp** to a production server, follow these general steps:  
+
+1. **Set up a virtual environment** – Install and configure a virtual environment to manage dependencies efficiently.  
+2. **Generate static files** – Collect static files for the `templates/` directory to ensure they are properly served.  
+3. **Configure Nginx** – Reference the generated static files in the Nginx configuration to serve them correctly.  
+
+These are high-level steps (Additional Configurations are required.)
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/mission-impossible-rag.git
+   git clone https://github.com/iamrahulreddy/miapp.git
    ```
 
 2. **Install Dependencies**:
@@ -180,4 +189,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Thank you for checking out the Mission: Impossible RAG Application! I hope you enjoy exploring the world of Ethan Hunt and his team as much as I enjoyed creating this project. 🕵️‍♂️🎬
+Thank you for checking out the `miapp` I hope you enjoy exploring the world of Ethan Hunt and his team as much as I enjoyed creating this project. 🕵️‍♂️🎬
