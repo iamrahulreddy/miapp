@@ -75,7 +75,7 @@ I have only used *Mission: Impossible* film data for embedding and retrieving co
 ### Usage
 
 1. **Enter Your Query**: Type your question about the *Mission: Impossible* franchise in the input box.
-2. **Submit**: Click the "Execute Mission Protocol" button to submit your query.
+2. **Submit**: Click the "Send Button (Up Arrow)" button to submit your query.
 3. **Receive Response**: Wait for the application to process your query and display the response. Since LLMs (Large Language Models) are probabilistic, you may receive a slightly different but still relevant response.
 
 ### Screenshots
