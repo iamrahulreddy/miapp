@@ -1,5 +1,3 @@
-## Mission: Impossible RAG Application
-
 Welcome to the miapp! This project is a labor of love, inspired by my deep admiration for the *Mission: Impossible* film franchise. Whether you're a die-hard fan or just curious about the intricate world of espionage, this application is designed to provide you with insightful and engaging information about the characters and plots from the *Mission: Impossible* universe.
 
 ### **Live Demo**
